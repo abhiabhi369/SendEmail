@@ -69,15 +69,15 @@ def sendText(Number,Text,Country):
 def sendEmail(Email,Text):
     msg = MIMEText(_text=Text)
     msg['Subject'] = 'Hello Abhi'
-    msg['From'] = 'abhilashgangula370@gmail.com'
+    msg['From'] = 'admin email'
     msg['To'] = Email
 
     server = smtplib.SMTP('smtp.gmail.com')
     server.starttls()
-    server.login('abhilashgangula370@gmail.com','thnmrfzpklvmebvb')
+    server.login('admin email here','your app password')
     print('login')
     try:
-        server.send_message(msg,'abhilashgangula370@gmail.com',Email)
+        server.send_message(msg,'admin email here',Email)
         file.write('Email sent successfully, ')
         return True
     except Exception as e:
